@@ -35,20 +35,22 @@ def scrape():
 
            scraped_data.append(temp_list)
         
-        stars_data=[]
 
-        for i in range(0, len(scraped_data)):
-              Star_names=scraped_data[i][1]
-              Distance=scraped_data[i][3]
-              Mass=scraped_data[i][5]
-              Radius=scraped_data[i][6]
-              Lum=scraped_data[i][7]
-
-              required_data=[Star_names, Distance, Mass, Radius, Lum]
-              stars_data.append(required_data)
         
 # Calling Method    
 scrape()
+
+stars_data=[]
+
+for i in range(0, len(scraped_data)):
+        Star_names=scraped_data[i][1]
+        Distance=scraped_data[i][3]
+        Mass=scraped_data[i][5]
+        Radius=scraped_data[i][6]
+        Lum=scraped_data[i][7]
+
+        required_data=[Star_names, Distance, Mass, Radius, Lum]
+        stars_data.append(required_data)
 
 # Define Header
 headers = ["Star Name", "Distance", "Mass", "Radius", "Luminosity"]
